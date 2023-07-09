@@ -1,41 +1,46 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import './layout.css';
+import Header from './header/header'
+import SideBar from './side-bar/side-bar'
+import Footer from './footer/footer'
+import TableHeader from './table-header/table-header'
+import TableFilter from './table-filter/table-filter'
+import CustomerTable from './customer-table/customer-table'
 
-const header = (
-  <header>
-    <h1 className='header'>Welcome!</h1>
-    <h2>Getting Started React</h2>
-    <h3>JavaScript Library</h3>
-    <p>Guhan Ganesan</p>
-    <small>July 9, 2023</small>
-  </header>
-)
-
-// JSX element, main
 const main = (
-  <main>
-    <p>Prerequisite to get started react.js:</p>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
+
+  <main className='test'>
+
+     <div className='container'>
+        
+        <Header/>
+
+        <div className='content'>
+
+          <SideBar/>
+
+          <div className='table-view'>
+
+              <TableHeader/>
+
+              <TableFilter/>
+
+              <CustomerTable/>
+          </div>
+
+        </div>
+
+       <Footer/>
+
+     </div>
   </main>
 )
 
-// JSX element, footer
-const footer = (
-  <footer>
-    <p>Copyright 2020</p>
-  </footer>
-)
 
-// JSX element, app, a container or a parent
 const app = (
   <div>
-    {header}
     {main}
-    {footer}
   </div>
 )
 
