@@ -1,6 +1,6 @@
-function Blog(){
+function Blog(props){
     return  <>
-            <h1>I am Blog</h1>
+            <h1>I am {props.blog_name} </h1>
             </>
 }
 

@@ -3,7 +3,8 @@ import Contact from '../pages/Contact';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function SideBar(){
-    return  <>
+
+return  <>
             <div className='side-bar'>
                <ul class="list-group">
                   <li class="list-group-item"><a href='/blogs'>blogs</a></li>
@@ -11,12 +12,12 @@ function SideBar(){
                </ul>
                <BrowserRouter>
                   <Routes>
-                     <Route   path="blogs" element={<Blog />} />
+                     <Route   path="blogs" element={<Blog blog_name = 'React JS Course!' />} />
                      <Route   path="contacts" element={<Contact />} />
                   </Routes>
                </BrowserRouter>
             </div>
-            </>
+         </>
 }
 
 export default SideBar;
