@@ -1,6 +1,6 @@
-function Contact(){
+function Contact(props){
     return  <>
-            <h1>I am Contact</h1>
+            <h1>I am {props.name} </h1>
             </>
 }
 
