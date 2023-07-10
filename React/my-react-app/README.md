@@ -6,4 +6,8 @@
 4. To uninstall, run this command: npm uninstall -g create-react-app
 5. npm start
 6. http://localhost:3000
+7. npm install bootstrap
+8. import 'bootstrap/dist/css/bootstrap.min.css';  => index.js file 
+   import 'bootstrap/dist/js/bootstrap.bundle.min'; => => index.js file
+9. 
 

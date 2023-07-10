@@ -1,7 +1,7 @@
 function CustomerTable(){
     return  <>
                 <div className='table-view-table'>
-                  <table className='customers'>
+                  <table className='table table-bordered'>
                       <tr>
                         <th>Company</th>
                         <th>Contact</th>
