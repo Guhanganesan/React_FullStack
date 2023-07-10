@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './layout.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 import Header from './header/header'
 import SideBar from './side-bar/side-bar'
 import Footer from './footer/footer'

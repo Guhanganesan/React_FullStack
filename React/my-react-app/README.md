@@ -9,5 +9,5 @@
 7. npm install bootstrap
 8. import 'bootstrap/dist/css/bootstrap.min.css';  => index.js file 
    import 'bootstrap/dist/js/bootstrap.bundle.min'; => => index.js file
-9. 
+9. npm i -D react-router-dom@latest
 
