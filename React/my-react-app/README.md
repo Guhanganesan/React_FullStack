@@ -10,4 +10,5 @@
 8. import 'bootstrap/dist/css/bootstrap.min.css';  => index.js file 
    import 'bootstrap/dist/js/bootstrap.bundle.min'; => => index.js file
 9. npm i -D react-router-dom@latest
+10. npm i semantic-ui-react
 

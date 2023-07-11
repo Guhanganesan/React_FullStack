@@ -8,11 +8,20 @@ function SideBar(){
 
 const myName = "Guhan Ganesan";
 const courses = ['JAVA','HTML','CSS','PYTHON']
-const data = {
-   'name':'guhan',
-   'age':32,
-   'mobile':349843
-}
+const data = [
+   {
+      'id':1,
+      'name':'guhan',
+      'age':32,
+      'mobile':349843
+   },
+   {
+      'id':2,
+      'name':'anbu',
+      'age':30,
+      'mobile':464274
+   }
+]
 
 return  <>
             <div className='side-bar'>

@@ -1,3 +1,5 @@
+import { Container, Grid, Header, List } from "semantic-ui-react";
+
 function Blog(props){
 
     const shoot = () => {
@@ -20,6 +22,28 @@ function Blog(props){
             <button onClick={()=> display(props.blog_data) }>click data</button>
             <br></br>
             <button onClick={(event)=> find_event("Hello", event) }>check event</button>
+            <br></br>
+            <Container>
+                <Grid>
+                <Grid.Row>
+                    <Grid.Column>
+                    <Header>List</Header>
+                    <List>
+                        {props.blog_data.map(el => {
+                        return (
+                            <List.Item  key={el.id}>
+                            <List.Content>
+                                {el.name} {el.mobile}
+                            </List.Content>
+                            {/* <List.Content>{el.phone}</List.Content> */}
+                            </List.Item>
+                        );
+                        })}
+                    </List>
+                    </Grid.Column>
+                </Grid.Row>
+                </Grid>
+            </Container>
             </>
 }
 
