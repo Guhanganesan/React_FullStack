@@ -8,6 +8,11 @@ function SideBar(){
 
 const myName = "Guhan Ganesan";
 const courses = ['JAVA','HTML','CSS','PYTHON']
+const data = {
+   'name':'guhan',
+   'age':32,
+   'mobile':349843
+}
 
 return  <>
             <div className='side-bar'>
@@ -18,7 +23,7 @@ return  <>
                </ul>
                <BrowserRouter>
                   <Routes>
-                     <Route   path="blogs" element={<Blog blog_name = 'React JS Course!' />} />
+                     <Route   path="blogs" element={<Blog blog_data={data} />} />
                      <Route   path="contacts" element={<Contact name={myName} />} />
                      <Route   path="courses" element={<Course courses={courses} />} />
                   </Routes>
