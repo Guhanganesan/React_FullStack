@@ -23,7 +23,7 @@ function Blog(props){
             <br></br>
             <button onClick={(event)=> find_event("Hello", event) }>check event</button>
             <br></br>
-            <Container>
+            {/* <Container>
                 <Grid>
                 <Grid.Row>
                     <Grid.Column>
@@ -35,7 +35,7 @@ function Blog(props){
                             <List.Content>
                                 {el.name} {el.mobile}
                             </List.Content>
-                            {/* <List.Content>{el.phone}</List.Content> */}
+                            <List.Content>{el.phone}</List.Content>
                             </List.Item>
                         );
                         })}
@@ -43,7 +43,14 @@ function Blog(props){
                     </Grid.Column>
                 </Grid.Row>
                 </Grid>
-            </Container>
+            </Container> */}
+            <table>
+                {
+                    props.blog_data.map(
+                        el => <tr><td>{el.id}</td> <td>{el.name}</td><t>{el.mobile}</t></tr>
+                    )
+                }
+            </table>
             </>
 }
 
