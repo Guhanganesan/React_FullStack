@@ -1,52 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './layout.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { useState } from "react";
+import ReactDOM from "react-dom/client";
 
-import Header from './header/header'
-import SideBar from './side-bar/side-bar'
-import Footer from './footer/footer'
-import TableHeader from './table-header/table-header'
-import TableFilter from './table-filter/table-filter'
-import CustomerTable from './customer-table/customer-table'
+function FavoriteColor() {
+  const [name, setName] = useState("Guhan");
 
-const main = (
+  return (
+    <>
+      <h1>Hello {name}!</h1>
+      <button type="button" onClick={() => setName("Ganesan")} >click</button>
+    </>
+  )
+}
 
-  <main className='test'>
-
-     <div className='container'>
-        
-        <Header/>
-
-        <div className='content'>
-
-          <SideBar/>
-
-          <div className='table-view'>
-
-              <TableHeader/>
-
-              <TableFilter/>
-
-              <CustomerTable/>
-          </div>
-
-        </div>
-
-       <Footer/>
-
-     </div>
-  </main>
-)
-
-
-const app = (
-  <div>
-    {main}
-  </div>
-)
-
-const rootElement = document.getElementById('root')
-
-ReactDOM.render(app, rootElement)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<FavoriteColor />);
