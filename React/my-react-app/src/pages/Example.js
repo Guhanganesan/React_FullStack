@@ -1,6 +1,12 @@
 function Example({name, courses, data}){
 
     const list_items = courses.map( (course) => <li> {course} </li>)
+
+    const items = [
+        {id: 1, name: 'bread'},
+        {id: 2, name: 'milk'},
+        {id: 3, name: 'eggs'}
+      ];
     
     return (
 
@@ -10,7 +16,7 @@ function Example({name, courses, data}){
             <h3>Courses: </h3>
             <ul>
                   {/* {list_items} */}
-                  {courses.map( (course) => <li> {course} </li>)}
+                  {courses.map( (course, index) => <li key={index}> {course} </li>)}
             </ul>
 
             <h3>Data: </h3>
@@ -22,7 +28,16 @@ function Example({name, courses, data}){
                     )
                 }
             </table>
-           
+
+            <h1>Grocery List</h1>
+            <ul>
+                {items.map((item) => <li key={item.id}>{item.name}</li>)}
+            </ul>
+
+            <ul>
+                {list_items}
+            </ul>
+            
         </>
         
     ); 
