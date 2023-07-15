@@ -1,6 +1,6 @@
 function TableHeader(){
     return  <>
-                <div className='table-view-header'>
+                <div>
                     <h1>I am pipeline</h1>
                 </div>
             </>

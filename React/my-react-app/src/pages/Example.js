@@ -1,3 +1,5 @@
+import SendData from './Page1';
+
 function Example({name, courses, data}){
 
     const list_items = courses.map( (course) => <li> {course} </li>)
@@ -37,6 +39,17 @@ function Example({name, courses, data}){
             <ul>
                 {list_items}
             </ul>
+
+            <div>
+
+            {/* <SendData ></SendData>
+            <SendData ></SendData> */}
+
+            {
+                items.map( (item) => <div> <SendData item={item} /> </div> )
+            }
+            </div>
+            
             
         </>
         
