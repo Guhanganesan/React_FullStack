@@ -10,6 +10,7 @@ function Example({name, courses, data}){
         {id: 3, name: 'eggs'}
       ];
     
+      
     return (
 
         <>
