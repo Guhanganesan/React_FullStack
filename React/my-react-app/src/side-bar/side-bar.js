@@ -1,7 +1,10 @@
+import { useState } from 'react';
+
 import Blog from '../pages/Blogs';
 import Contact from '../pages/Contact';
 import Course from '../pages/Course';
 import Example from '../pages/Example';
+import Counter from '../pages/Counter';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -24,6 +27,8 @@ const data = [
    }
 ]
 
+const [count, setCount] = useState(0);
+
 return  <>
             <div className='side-bar'>
                <ul class="list-group">
@@ -31,6 +36,7 @@ return  <>
                   <li class="list-group-item"><a href='/contacts'>contacts</a></li>
                   <li class="list-group-item"><a href='/courses'>courses</a></li>
                   <li class="list-group-item"><a href='/example'>examples</a></li>
+                  <li class="list-group-item"><a href='/counts'>counts</a></li>
                </ul>
                <BrowserRouter>
                   <Routes>
@@ -38,6 +44,7 @@ return  <>
                      <Route   path="contacts" element={<Contact name={myName} />} />
                      <Route   path="courses" element={<Course courses={courses} />} />
                      <Route   path="example" element={<Example name={myName} courses={courses} data={data} />} />
+                     <Route   path="counts" element={<Counter  setCount={setCount} count={count} />} />
                   </Routes>
                </BrowserRouter>
             </div>
