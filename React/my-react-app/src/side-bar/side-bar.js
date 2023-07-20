@@ -5,6 +5,8 @@ import Contact from '../pages/Contact';
 import Course from '../pages/Course';
 import Example from '../pages/Example';
 import Counter from '../pages/Counter';
+import Employee from '../pages/Employee';
+import View from '../pages/View';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -24,6 +26,18 @@ const data = [
       'name':'anbu',
       'age':30,
       'mobile':464274
+   },
+   {
+      'id':3,
+      'name':'raja',
+      'age':30,
+      'mobile':12345
+   },
+   {
+      'id':5,
+      'name':'kannan',
+      'age':37,
+      'mobile':543231
    }
 ]
 
@@ -37,6 +51,8 @@ return  <>
                   <li class="list-group-item"><a href='/courses'>courses</a></li>
                   <li class="list-group-item"><a href='/example'>examples</a></li>
                   <li class="list-group-item"><a href='/counts'>counts</a></li>
+                  <li class="list-group-item"><a href='/employee'>employee</a></li>
+                  <li class="list-group-item"><a href='/view'>view</a></li>
                </ul>
                <BrowserRouter>
                   <Routes>
@@ -45,6 +61,8 @@ return  <>
                      <Route   path="courses" element={<Course courses={courses} />} />
                      <Route   path="example" element={<Example name={myName} courses={courses} data={data} />} />
                      <Route   path="counts" element={<Counter  setCount={setCount} count={count} />} />
+                     <Route   path="employee" element={<Employee  data={data} />} />
+                     <Route   path="view" element={<View  />} />
                   </Routes>
                </BrowserRouter>
             </div>
