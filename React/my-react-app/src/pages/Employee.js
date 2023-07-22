@@ -1,3 +1,5 @@
+import View from '../pages/View';
+
 function Employee(props){
     const details = props.data;
     console.log(details)
@@ -9,7 +11,7 @@ function Employee(props){
         window.sessionStorage.setItem("employee_name", item.name);
         window.sessionStorage.setItem("employee_age", item.age);
         window.sessionStorage.setItem("employee_mobile", item.mobile);
-        window.location.href="/view"
+        window.location.href="/view";
       }
 
     const rowItems = details.map((item) =>

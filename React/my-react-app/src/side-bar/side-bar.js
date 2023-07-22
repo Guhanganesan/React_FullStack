@@ -8,6 +8,8 @@ import Counter from '../pages/Counter';
 import Employee from '../pages/Employee';
 import View from '../pages/View';
 
+import AddEmployee from '../components/AddEmployee';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function SideBar(){
@@ -53,6 +55,7 @@ return  <>
                   <li class="list-group-item"><a href='/counts'>counts</a></li>
                   <li class="list-group-item"><a href='/employee'>employee</a></li>
                   <li class="list-group-item"><a href='/view'>view</a></li>
+                  <li class="list-group-item"><a href='/create'>Create Employee</a></li>
                </ul>
                <BrowserRouter>
                   <Routes>
@@ -63,6 +66,7 @@ return  <>
                      <Route   path="counts" element={<Counter  setCount={setCount} count={count} />} />
                      <Route   path="employee" element={<Employee  data={data} />} />
                      <Route   path="view" element={<View  />} />
+                     <Route   path="create" element={<AddEmployee/>}/>
                   </Routes>
                </BrowserRouter>
             </div>
